@@ -1,34 +1,3 @@
 {
-  "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
-    "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
-    ],
-    "/UpLoad/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/UpLoad/page.css",
-      "static/chunks/app/UpLoad/page.js"
-    ],
-    "/SignIn/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/SignIn/page.css",
-      "static/chunks/app/SignIn/page.js"
-    ],
-    "/SignUp/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/SignUp/page.css",
-      "static/chunks/app/SignUp/page.js"
-    ]
-  }
+  "pages": {}
 }

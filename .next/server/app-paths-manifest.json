@@ -1,7 +1,1 @@
-{
-  "/page": "app/page.js",
-  "/SignIn/page": "app/SignIn/page.js",
-  "/UpLoad/page": "app/UpLoad/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/SignUp/page": "app/SignUp/page.js"
-}
+{}

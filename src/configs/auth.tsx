@@ -258,6 +258,7 @@ export const authConfig: AuthOptions = {
     }),
   ],
   callbacks: {
+    // @ts-ignore 
     async signIn({ user, account }) {
       // const test=getServerSession();
       // console.log(test);

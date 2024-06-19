@@ -39,15 +39,18 @@ export default function Background({
 
   useEffect(() => {
     if (inputSearch.current) {
+      // @ts-ignore
       inputSearch.current.focus();
-      const handleKeyUp = (event) => {
+      const handleKeyUp = (event: any) => {
         if (event.keyCode === 13) {
           handleSubmit();
         }
       };
+      // @ts-ignore
       inputSearch.current.addEventListener("keyup", handleKeyUp);
       return () => {
         if (inputSearch.current) {
+          // @ts-ignore
           inputSearch.current.removeEventListener("keyup", handleKeyUp);
         }
       };

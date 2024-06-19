@@ -11,6 +11,7 @@ export default function Menu() {
             <div className={styles.Menu}>
                 <ul>
                     <li>
+                        {/* @ts-ignore */}
                         <Link className={styles.Link} href={`/Profile/${sesion.data?.user.Id}`}>My Profile</Link>
                     </li>
                     <li>

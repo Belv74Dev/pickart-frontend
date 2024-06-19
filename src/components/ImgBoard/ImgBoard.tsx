@@ -8,8 +8,6 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 
 // import MidBar from './MidBar'
 
-
-
 interface Art {
     ArtWorkId: number;
     Title: string;
@@ -138,6 +136,7 @@ export default function ImgBoard() {
     };
     useEffect(() => {
         if (session.status === "authenticated") {
+            // @ts-ignore
             axios.defaults.headers.common['Authorization'] = `Bearer ${session.data?.user.token}`;
         }
     }, [session]);

@@ -14,7 +14,8 @@ export default function ArtTitle({ Title, ArtWorkId }: { Title: string, ArtWorkI
 
     useEffect(() => {
         if (session.status === "authenticated") {
-            axios.defaults.headers.common['Authorization'] = `Bearer ${session.data?.user.token}`;
+            // @ts-ignore
+            axios.defaults.headers.common['Authorization'] = `Bearer ${session.data?.user?.token}`;
             axios.get(`http://localhost:3001/isLiked?ArtWorkId=${ArtWorkId}`)
                 .then((response) => {
                     setIsLiked(response.data.isLiked);

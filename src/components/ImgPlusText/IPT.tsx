@@ -5,7 +5,7 @@ export default function IPT({ title, img="/Login_White.png",size="M" }: { title:
     if(size=="L") {
         return (
             <div className={styles.IPT_L}>
-                <Image src={img} priority alt='' width={64} height={64} />
+                <Image src={img ?? ''} priority alt='' width={64} height={64} />
                 <p>{title}</p>
             </div>
         )
@@ -13,14 +13,14 @@ export default function IPT({ title, img="/Login_White.png",size="M" }: { title:
     if(size=="S") {
         return (
             <div className={styles.IPT_S}>
-                <Image src={img} priority alt='' width={24} height={24} />
+                <Image src={img ?? ''} priority alt='' width={24} height={24} />
                 <p>{title}</p>
             </div>
         )
     }
     return (
         <div className={styles.IPT}>
-            <Image src={img} priority alt='' width={32} height={32} />
+            <Image src={img ?? ''} priority alt='' width={32} height={32} />
             <p>{title}</p>
         </div>
     )

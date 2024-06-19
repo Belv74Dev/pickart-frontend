@@ -37,7 +37,9 @@ export default function PartfolioPage() {
 
     useEffect(() => {
         if (session.status === "authenticated") {
+            {/* @ts-ignore */}
             axios.defaults.headers.common['Authorization'] = `Bearer ${session.data?.user.token}`;
+            {/* @ts-ignore */}
             axios.get<User>(`http://localhost:3001/Profile?Id=${session.data?.user.Id}`)
                 .then((response) => {
                     setUser(response.data);
@@ -49,6 +51,7 @@ export default function PartfolioPage() {
     const filePicker = useRef(null);
     useEffect(() => {
         if (session.status === "authenticated") {
+            {/* @ts-ignore */}
             axios.defaults.headers.common['Authorization'] = `Bearer ${session.data?.user.token}`;
         }
     }, [session]);
@@ -74,6 +77,7 @@ export default function PartfolioPage() {
 
     useEffect(() => {
         if (fetching) {
+            {/* @ts-ignore */}
             axios.get<User>(`http://localhost:3001/Profile?Id=${session.data?.user.Id}`)
                 .then((response) => {
                     setUser(response.data);
@@ -85,7 +89,7 @@ export default function PartfolioPage() {
     }, [fetching, session]);
     const descriptionInputRef = useRef(null);
     const [description, setDescription] = useState('');
-    const handleKeyPress = (event) => {
+    const handleKeyPress = (event: any) => {
         console.log(event.key);
         if (event.key === 'Enter') {
             if (event.target === descriptionInputRef.current) {
@@ -94,7 +98,7 @@ export default function PartfolioPage() {
         }
     };
     useEffect(() => {
-        const handleKeydown = (event) => {
+        const handleKeydown = (event: any) => {
             if (event.key === 'Escape') {
                 setIsHide(true);
             }
@@ -110,8 +114,10 @@ export default function PartfolioPage() {
             <div className={styles.MidBar}>
                 {/* <p className={styles.Pasive}>Partfolio</p> */}
             </div>
+            {/* @ts-ignore */}
             {session.status === "authenticated" ? <PartfolioImgBoard ProfileId={session.data.user.Id}></PartfolioImgBoard> : <p>Loading</p>}
             <div className={styles.FixB}>
+                {/* @ts-ignore */}
                 <div className={styles.ButtonF} onClick={() => filePicker.current.click()}>
                     <input
                         className={styles.Hide}
@@ -141,6 +147,7 @@ export default function PartfolioPage() {
                                 ref={descriptionInputRef}
                                 autoFocus
                             />
+                            {/* @ts-ignore */}
                             <div className={styles.Button} onClick={onSubmit}>Send</div>
                         {/* </form> */}
                     </div>

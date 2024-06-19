@@ -6,9 +6,10 @@ import { signIn } from "next-auth/react";
 // import { useRouter } from 'next/router';
 
 export default function SignIn() {
-    const handleKeyPress = (event) => {
+    const handleKeyPress = (event: any) => {
         if (event.key === 'Enter') {
             if (event.target === userName.current) {
+                {/* @ts-ignore */}
                 password.current.focus();
             } else if (event.target === password.current) {
                 onSubmit(event);
@@ -40,6 +41,7 @@ export default function SignIn() {
     };
 
     const handleSignUp = () => {
+        {/* @ts-ignore */}
         router.push('/SignUp');
     };
 
@@ -49,18 +51,21 @@ export default function SignIn() {
                 <div className={styles.ConteinerTop}>Sign In</div>
                 <div className={styles.ConteinerInside}>
                     <form onSubmit={onSubmit}>
+                        {/* @ts-ignore */}
                         <input
                             placeholder='UserName'
-                            onChange={(e) => (userName.current.value = e.target.value)}
+                            onChange={(e) => (userName!.current!.value = e.target.value)}
                             onKeyPress={handleKeyPress}
                             ref={userName}></input>
+                        {/* @ts-ignore */}
                         <input
                             placeholder='Password'
-                            onChange={(e) => (password.current.value = e.target.value)}
+                            onChange={(e) => (password!.current!.value = e.target.value)}
                             onKeyPress={handleKeyPress}
                             ref={password}></input>
                     </form>
                     <div>
+                        {/* @ts-ignore */}
                         <div className={styles.Button} onClick={onSubmit}>Sign In</div>
                         <Link href={'/SignUp'} className={styles.Link}>
                             <div className={styles.Button} >Sign Up</div>

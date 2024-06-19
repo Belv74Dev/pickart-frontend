@@ -20,6 +20,7 @@ export default function PartfolioImgBoard({ ProfileId }: { ProfileId: number }) 
 
     useEffect(() => {
         if (session.status === "authenticated") {
+            {/* @ts-ignore */}
             axios.defaults.headers.common['Authorization'] = `Bearer ${session.data?.user.token}`;
         }
     }, [session]);

@@ -11,7 +11,8 @@ const SubButton = ({ AuthorId }: { AuthorId: number }) => {
 
     useEffect(() => {
         if (session.status === "authenticated") {
-            axios.defaults.headers.common['Authorization'] = `Bearer ${session.data?.user.token}`;
+            // @ts-ignore
+            axios.defaults.headers.common['Authorization'] = `Bearer ${session?.data?.user?.token}`;
             setFetching(true);
         }
     }, [session]);

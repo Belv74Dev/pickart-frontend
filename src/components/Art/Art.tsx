@@ -65,7 +65,7 @@ export default function Art({ id }: { id: number }) {
                     Name={art.Name}
                     AuthorId={art.AuthorId}
                     AuthorImg={ art.Avatar ? AvatarPath + art.Avatar: "/Login_white.png"}
-                    Description={art.Description ?art.Description : null }
+                    Description={art.Description || undefined }
                 ></ArtInfo>
             </div >
         );

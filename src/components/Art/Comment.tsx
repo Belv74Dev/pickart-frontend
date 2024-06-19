@@ -26,6 +26,7 @@ export default function Comments({ ArtWorkId }: { ArtWorkId: number }) {
 
     useEffect(() => {
         if (session.status === "authenticated") {
+            // @ts-ignore
             axios.defaults.headers.common['Authorization'] = `Bearer ${session.data?.user.token}`;
         }
     }, [session]);
@@ -72,15 +73,18 @@ export default function Comments({ ArtWorkId }: { ArtWorkId: number }) {
     
         useEffect(() => {
             if (inputRef.current) {
-                inputRef.current.focus();
-                const handleKeyUp = (event) => {
+                // @ts-ignore
+                inputRef.current?.focus();
+                const handleKeyUp = (event: any) => {
                     if (event.keyCode === 13) {
                         handleSubmit();
                     }
                 };
+                // @ts-ignore
                 inputRef.current.addEventListener("keyup", handleKeyUp);
                 return () => {
                     if (inputRef.current) {
+                        // @ts-ignore
                         inputRef.current.removeEventListener("keyup", handleKeyUp);
                     }
                 };
@@ -89,6 +93,7 @@ export default function Comments({ ArtWorkId }: { ArtWorkId: number }) {
     
         return (
             <div className={styles.CommentInput}>
+                {/* @ts-ignore */}
                 <IPT title=' ' img={session.status === "authenticated"? AvatarPath+session.data.user?.Avatar:"/likesWhite.png"} size='S'></IPT>
                 <input
                     ref={inputRef}
@@ -97,6 +102,7 @@ export default function Comments({ ArtWorkId }: { ArtWorkId: number }) {
                     onChange={(event) => setInputValue(event.target.value)}
                     placeholder="Enter your comment"
                 ></input>
+                {/* @ts-ignore */}
                 <div className={styles.Send} onClick={session.status === "authenticated" ? handleSubmit : signIn}>
                     <p>Send</p>
                     <div className={styles.arrow}></div>

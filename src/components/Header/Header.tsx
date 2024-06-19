@@ -51,15 +51,18 @@ export default function Header() {
 
   useEffect(() => {
     if (inputSearch.current) {
+      // @ts-ignore
       inputSearch.current.focus();
-      const handleKeyUp = (event) => {
+      const handleKeyUp = (event: any) => {
         if (event.keyCode === 13) {
           handleSubmit();
         }
       };
+      // @ts-ignore
       inputSearch.current.addEventListener("keyup", handleKeyUp);
       return () => {
         if (inputSearch.current) {
+          // @ts-ignore
           inputSearch.current.removeEventListener("keyup", handleKeyUp);
         }
       };
@@ -94,7 +97,8 @@ export default function Header() {
                             </Link>
                                 {/* onClick={() => signOut({ callbackUrl: "/" })} */}
                                 <div onClick={SignOutClick} >
-                                    <IPT title={session.data.user.Name} img={session.data.user?.Avatar? "http://localhost:3001/Avatars/"+session.data.user?.Avatar :"/Login_White.png" }  ></IPT>
+                                    {/* @ts-ignore */}
+                                    <IPT title={session?.data?.user?.Name} img={session.data.user?.Avatar? "http://localhost:3001/Avatars/"+session.data.user?.Avatar :"/Login_White.png" }  ></IPT>
                                 </div>
                                 <div onClick={BurgerClick} className={isHideUM ? styles.ImgButton : styles.ImgButtonClick}>
                                     <ImgButton img={"/BM.png"}></ImgButton>

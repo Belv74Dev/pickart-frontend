@@ -7,7 +7,8 @@ import Profile from '@/components/Profile/Profile'
 export default async function ProfilePage() {
     const str: string = usePathname();
     const numberPattern: RegExp = /\d+$/; // Регулярное выражение для поиска числа в конце строки
-    const match: RegExpMatchArray | null = str.match(numberPattern); // Ищем соответствие регулярному выражению в строке
+    const match: RegExpMatchArray = str.match(numberPattern) as RegExpMatchArray; // Ищем соответствие регулярному выражению в строке
+    if (match === null) { return }
     const Id: number = parseInt(match[0], 10); // Преобразуем найденное число в числовой тип данных
     // console.log("Id ",Id);
     return (

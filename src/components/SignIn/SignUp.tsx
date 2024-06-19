@@ -7,14 +7,14 @@ import axios from 'axios';
 
 
 export default function SignUp() {
-    const handleKeyPress = (event) => {
+    const handleKeyPress = (event: any) => {
         if (event.key === 'Enter') {
             if (event.target === userName.current) {
-                email.current.focus();
+                email?.current?.focus();
             } else if (event.target === email.current) {
-                password.current.focus();
+                password?.current?.focus();
             } else if (event.target === password.current) {
-                confirmPassword.current.focus();
+                confirmPassword?.current?.focus();
             } else if (event.target === confirmPassword.current) {
                 onSubmit(event);
             }
@@ -29,8 +29,8 @@ export default function SignUp() {
         e.preventDefault();
         if (!userName.current || !password.current) return;
         try {
-            if (userName.current.value != '' && email.current.value != '' && password.current.value != '') {
-                const Reg = await axios.post(`http://localhost:3001/Reg?name=${userName.current.value}&email=${email.current.value}&password=${password.current.value}`);
+            if (userName.current.value != '' && email?.current?.value != '' && password.current.value != '') {
+                const Reg = await axios.post(`http://localhost:3001/Reg?name=${userName.current.value}&email=${email?.current?.value}&password=${password.current.value}`);
                 if (Reg) {
                     const result = await signIn("credentials", {
                         email: userName.current.value,
@@ -59,26 +59,27 @@ export default function SignUp() {
                     <form onSubmit={onSubmit}>
                         <input
                             placeholder='UserName'
-                            onChange={(e) => (userName.current.value = e.target.value)}
+                            onChange={(e) => (userName!.current!.value = e.target.value)}
                             onKeyPress={handleKeyPress}
                             ref={userName}></input>
                         <input
                             placeholder='Email'
-                            onChange={(e) => (email.current.value = e.target.value)}
+                            onChange={(e) => (email!.current!.value = e.target.value)}
                             onKeyPress={handleKeyPress}
                             ref={email}></input>
                         <input
                             placeholder='Password'
-                            onChange={(e) => (password.current.value = e.target.value)}
+                            onChange={(e) => (password!.current!.value = e.target.value)}
                             onKeyPress={handleKeyPress}
                             ref={password}></input>
                         <input
                             placeholder='Confirm password'
-                            onChange={(e) => (confirmPassword.current.value = e.target.value)}
+                            onChange={(e) => (confirmPassword!.current!.value = e.target.value)}
                             onKeyPress={handleKeyPress}
                             ref={confirmPassword}></input>
                     </form>
                     <div>
+                        {/* @ts-ignore */}
                         <div className={styles.Button} onClick={onSubmit}>Sign Up</div>
                         <Link href={'/SignIn'} className={styles.Link}>
                             <div className={styles.Button} >Sign In</div>

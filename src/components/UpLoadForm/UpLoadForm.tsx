@@ -13,7 +13,8 @@ export default function UpLoadForm() {
     const session = useSession();
     useEffect(() => {
         if (session.status === "authenticated") {
-            axios.defaults.headers.common['Authorization'] = `Bearer ${session.data?.user.token}`;
+            // @ts-ignore
+            axios.defaults.headers.common['Authorization'] = `Bearer ${session?.data?.user?.token}`;
         }
     }, [session]);
     const [isUpLoad, setISUpLoad] = useState(false);
@@ -65,27 +66,33 @@ export default function UpLoadForm() {
 
     useEffect(() => {
         if (titleInputRef.current) {
-            titleInputRef.current.focus();
+            // @ts-ignore
+            titleInputRef?.current?.focus();
         }
     }, []);
 
-    const handleKeyPress = (event) => {
+    const handleKeyPress = (event: any) => {
         if (event.key === 'Enter') {
             if (event.target === titleInputRef.current) {
+                // @ts-ignore
                 descriptionInputRef.current.focus();
             } else if (event.target === descriptionInputRef.current) {
+                // @ts-ignore
                 tegsInputRef.current.focus();
             } else if (event.target === tegsInputRef.current) {
+                // @ts-ignore
                 const teg = tegsInputRef.current.value.trim();
                 if (teg !== '') {
+                    // @ts-ignore
                     setTegs((prevTegs) => [...prevTegs, teg]);
+                    // @ts-ignore
                     tegsInputRef.current.value = '';
                 }
             }
         }
     };
 
-    const removeTeg = (tegToRemove) => {
+    const removeTeg = (tegToRemove: any) => {
         setTegs((prevTegs) => prevTegs.filter(teg => teg !== tegToRemove));
     };
     return (
@@ -121,7 +128,8 @@ export default function UpLoadForm() {
                                 <p>Upload art:</p>
                             </div>
                             <div>
-                                <div className={styles.Button} onClick={() => filePicker.current.click()}>
+                                {/* @ts-ignore */}
+                                <div className={styles.Button} onClick={() => filePicker?.current?.click()}>
                                     <input
                                         className={styles.Hide}
                                         ref={filePicker}
@@ -177,6 +185,7 @@ export default function UpLoadForm() {
                             </div>
                             <div className={styles.Tegs}>
                                 {tegs.map((teg) => (
+                                    // @ts-ignore
                                     <div className={styles.Teg} key={teg} onClick={() => removeTeg(teg, setTegs)}>
                                         <p>{teg}</p>
                                         <div className={styles.delete}></div>
@@ -184,6 +193,7 @@ export default function UpLoadForm() {
                                 ))}
                             </div>
                         </div>
+                        {/* @ts-ignore */}
                         <div className={styles.UpButton} onClick={onSubmit}>
                             Upload
                         </div>
