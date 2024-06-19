@@ -1,0 +1,178 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/components/SignIn/SignIn.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.SignIn_UpLoadForm__rmenK {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.SignIn_Tegs__7_os2 {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+.SignIn_Tegs__7_os2 .SignIn_Teg__fXYpl {
+  background-color: #313131;
+  height: 1.5rem;
+  width: auto;
+  padding: 2%;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  opacity: 0.6;
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  box-sizing: border-box;
+}
+
+.SignIn_Teg__fXYpl:hover {
+  background-color: #202020;
+  color: #ffffff;
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+.SignIn_Button__4Y8hJ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #121212;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  width: 10rem;
+  margin: 0.9375rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  opacity: 0.6;
+  filter: drop-shadow(-1px 2px 2px #121212);
+}
+
+.SignIn_Button__4Y8hJ:hover {
+  background-color: #202020;
+  color: #ffffff;
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+.SignIn_UpButton__Qy8uR {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #121212;
+  font-size: 1.25rem;
+  height: 3.75rem;
+  width: 15rem;
+  margin-top: 1.25rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  opacity: 0.6;
+  filter: drop-shadow(-1px 2px 2px #121212);
+}
+
+.SignIn_UpButton__Qy8uR:hover {
+  background-color: #202020;
+  color: #ffffff;
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+.SignIn_Conteiner__2wdkT {
+  background-color: #202020;
+  width: 25%;
+  min-height: 6.25rem;
+  padding-bottom: 0.25%;
+  margin: 0;
+  margin-top: 1.25rem;
+  border-radius: 0.5rem;
+  border-color: #121212;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 0;
+  filter: drop-shadow(0 0px 2px rgba(0, 0, 0, 0.7098039216));
+  border-bottom-width: 3px;
+}
+.SignIn_Conteiner__2wdkT div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SignIn_Conteiner__2wdkT div img {
+  margin-top: 0.875rem;
+  border-radius: 0.5rem;
+  width: 80%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.SignIn_Conteiner__2wdkT p {
+  margin: 0;
+}
+
+.SignIn_ConteinerTop__P7uuJ {
+  background-color: #313131;
+  height: 3.125rem;
+  border-radius: 0.5rem;
+  filter: drop-shadow(-1px 2px 2px #121212);
+  font-size: 1.5rem;
+  padding-left: 1.5%;
+}
+.SignIn_ConteinerTop__P7uuJ p {
+  opacity: 0.6;
+}
+
+.SignIn_ConteinerInside__AkDJI {
+  min-height: 2.5rem;
+  margin: 0.625rem;
+  margin-top: 0.375rem;
+  margin-bottom: 0;
+  opacity: 0.6;
+  border-radius: 0.5rem;
+  filter: drop-shadow(-1px 2px 2px #121212);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SignIn_ConteinerInside__AkDJI input::placeholder {
+  font-size: 1rem;
+}
+.SignIn_ConteinerInside__AkDJI input {
+  text-decoration: none;
+  background-color: #313131;
+  border: none;
+  color: #ffffff;
+  height: 2.5rem;
+  width: 99%;
+  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
+  border-radius: 0.5rem;
+  padding-left: 0.9375rem;
+}
+
+.SignIn_ConteinerInside__AkDJI input:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.SignIn_Hide__oZvPC {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.SignIn_Link__QG_ny {
+  color: #ffffff;
+  text-decoration: none;
+}

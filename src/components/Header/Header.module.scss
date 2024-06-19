@@ -1,0 +1,138 @@
+$black: #121212;
+$grafit: #313131;
+$lightGrafit: #4a4a4a;
+$darkGrafit: #202020;
+$white: #ffffff;
+$op: 0.6;
+$hightTotBar: 2.5rem;
+
+.Empty {
+    width: 100%;
+    height: calc($hightTotBar + 2px);
+    background-color: $black;
+}
+.Header {
+    
+    width: 100%;
+    height: $hightTotBar;
+    background-color: $grafit;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    top: 0px;
+    border-color: $darkGrafit;
+    border-style: solid;
+    // box-sizing: border-box;
+    border-width: 0;
+    filter: drop-shadow(0 0px 2px #000000b5);
+    border-bottom-width: 3px;
+}
+
+.Logo {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    opacity: calc($op + 0.25);
+    text-decoration: none;
+    img 
+    { 
+        width: calc($hightTotBar*0.75);
+        height: auto;
+        margin: calc($hightTotBar*0.25/2);
+        transition: 0.2s all;
+    }
+    p {
+        font-size: calc($hightTotBar*0.6);
+        margin: auto;
+        color: $white;
+
+    }
+}
+.Shadow {
+    width: 100%;
+    height: calc($hightTotBar + 2px);
+    background-color: $darkGrafit;
+    filter: drop-shadow(0 2px 4px #000000b5);
+}
+.RightSite {
+    display: flex;
+    justify-content: center;
+    input {
+        height: calc($hightTotBar*0.65);
+        width: calc($hightTotBar*6);
+        // width: clamp(calc($hightTotBar*0.65),calc($hightTotBar*4),calc($hightTotBar*9)) ;
+        margin: calc($hightTotBar*0.35/2);
+        margin-right: calc($hightTotBar*0.25/2);
+        border-radius: calc($hightTotBar/2);
+        background-color: $lightGrafit;
+        border-color: $lightGrafit ;
+        text-decoration: none;
+        outline: $black;
+        color: $white;
+        padding: 0 calc($hightTotBar/2);
+        filter: drop-shadow(0 1px 2px #000000b5);
+        border: 1px;
+        opacity: $op;
+        background-image: url("./search_White.png");
+        background-repeat: no-repeat;
+        text-indent: 3%;
+        background-size: calc($hightTotBar*0.55);
+        background-position: 2% center;
+    }
+}
+.ImgButton {
+    img {
+        width: calc($hightTotBar*0.75);
+       height: auto;
+       margin: calc($hightTotBar*0.25/2);
+       transition: 0.2s all;
+       opacity: $op;
+   }
+}
+.a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/////
+/// Hovers----------------------------------------------
+.Logo:hover {
+    opacity: 1;
+ img {
+    width: calc($hightTotBar*0.85);
+    margin: calc($hightTotBar*0.15/2);
+   
+}
+}
+.ImgButton:hover {
+    img {
+        width: calc($hightTotBar*0.9);
+        margin: calc($hightTotBar*0.1/2);
+       opacity: 1;
+        }
+   }
+.ImgButtonClick {
+    img {
+        width: calc($hightTotBar*0.9);
+        margin: calc($hightTotBar*0.1/2);
+       opacity: 1;
+        }
+   }
+.RightSite input:hover {
+    opacity: 0.9;
+}
+.RightSite input:focus {
+    opacity: 0.9;
+    // background-image: none;
+    // text-indent: 1%;
+}
+
+
+@media (max-width: 576px) {
+    .RightSite {
+        input {
+            display: none;
+        }
+    }
+}

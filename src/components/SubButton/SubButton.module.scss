@@ -1,0 +1,53 @@
+$black: #121212;
+$grafit: #313131;
+$lightGrafit: #4a4a4a;
+$darkGrafit: #202020;
+$white: #ffffff;
+$op: 0.6;
+$hightTotBar: 2.5rem;
+
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    font-size: calc($hightTotBar*0.5);
+    height: 60%;
+    width: 35%;
+    margin: calc($hightTotBar*1.25*0.3/2);
+    background-color: $white;
+    box-sizing: border-box;
+    border-radius: calc($hightTotBar/2.5);
+    opacity: $op;
+    filter: drop-shadow(-1px 2px 2px $black);
+}
+.Button:hover {
+    background-color: $darkGrafit;
+    color: $white;
+    border-style: solid;
+    border-color: $white;
+
+}
+.ButtonSub {
+    background-color: $darkGrafit;
+    color: $white;
+    border-style: solid;
+    border-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc($hightTotBar*0.5);
+    height: 60%;
+    width: 35%;
+    margin: calc($hightTotBar*1.25*0.3/2);
+    box-sizing: border-box;
+    border-radius: calc($hightTotBar/2.5);
+    opacity: $op;
+    filter: drop-shadow(-1px 2px 2px $black);
+}
+.ButtonSub:hover {
+    background-color: $white;
+    color: $black;
+    border-style: solid;
+    border-color: $white;
+}

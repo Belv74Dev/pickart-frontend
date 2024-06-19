@@ -1,0 +1,89 @@
+$black: #121212;
+$grafit: #313131;
+$lightGrafit: #4a4a4a;
+$darkGrafit: #202020;
+$white: #ffffff;
+$op: 0.6;
+$hightTotBar: 2.5rem;
+
+
+.Menu {
+    text-decoration: none;
+    color: $white;
+    background-color: $grafit;
+    // opacity: $op;
+    width: 10vw;
+    min-height: $hightTotBar*2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    border-radius: calc($hightTotBar/5);
+    filter: drop-shadow(0 2px 4px #000000b5);
+    padding-top: calc($hightTotBar + 2px);
+    border-color: $darkGrafit;
+    border-style: solid;
+    box-sizing: border-box;
+    border-width: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.a { 
+    all: unset;
+    text-decoration: none;
+}
+.Link {
+    text-decoration: none;
+    color: $white;
+    font-size: $hightTotBar/2;
+}
+.delitel {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 85%;
+    height: calc($hightTotBar*1.25/2);
+    opacity: $op;
+    margin: auto;
+    div {
+        width: 45%;
+        height: 2px;
+        background-color: $white;
+    }
+    p{
+        margin: auto;
+    }
+}
+
+.Button {
+    width: 85%;
+    height: calc($hightTotBar);
+    background-color: $white;
+    border-radius: calc($hightTotBar/5);
+    margin: calc(15%/2);
+    margin-top: calc(15%/2/2);
+    margin-bottom: calc(15%/2/2);
+    opacity: $op;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+
+    p {
+        font-size: $hightTotBar*0.65;
+        color: $black;
+    }
+}
+
+.Button:hover {
+    background-color: $darkGrafit;
+    color: $white;
+    border-style: solid;
+    border-color: $white;
+    box-sizing: border-box;
+
+    p {
+        color: $white;
+    }
+}

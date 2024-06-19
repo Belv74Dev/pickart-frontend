@@ -1,0 +1,107 @@
+$black: #121212;
+$grafit: #313131;
+$lightGrafit: #4a4a4a;
+$darkGrafit: #202020;
+$white: #ffffff;
+$op: 0.6;
+$hightTotBar: 2.5rem;
+
+.Shadow {
+    width: 100%;
+    height: 2px;
+    background-color: $darkGrafit;
+    filter: drop-shadow(0 2px 4px #000000b5);
+}
+
+.MidBar {
+    width: 100%;
+    height: calc($hightTotBar *0.8);
+    background-color: $grafit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: $darkGrafit;
+    border-style: solid;
+    // box-sizing: border-box;
+    border-width: 0;
+    filter: drop-shadow(0 0px 2px #000000b5);
+    border-bottom-width: 3px;
+    p {
+        color: $white;
+        // opacity: $op;
+        margin: calc($hightTotBar * 0.4/2);
+        font-size: calc($hightTotBar *0.4);
+    }
+}
+.Active {
+    opacity: 1;
+    text-decoration: underline solid $white;
+    text-underline-offset: calc($hightTotBar / 10);
+    text-decoration-thickness: calc($hightTotBar / 25);
+}
+.Passive {
+    opacity: $op;
+}
+.ImgBoard {
+    // margin-top: calc(var(--hightTotBar) / 20);
+    // height: 100hv;
+    background-color: var(--bleck);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    img {
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        float: left;
+        overflow: hidden;
+    }
+  }
+
+.MidBar p:hover {
+    opacity: 1;
+} 
+.ArtPreview {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    img {
+        border-radius: 1%;
+        width: 99%;
+        height: 99%;
+        margin: 0.5%;
+    }
+    .Title {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        color: $white;
+        font-size: calc($hightTotBar * 0.3);
+        margin: 0;
+        opacity: 0;
+        transition: 0.1s all;
+        width: 100%;
+        height: 20%;
+        background: url("./fade.png") bottom center repeat;
+        //вРЕМЕННОЕ ДЛЯ ОБРЕЗКИ ДЛИННЫХ НАЗВАНИЙ
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    
+}
+
+.ArtPreview:hover{
+    .Title{
+    // bottom: calc($hightTotBar * 0.15);
+    font-size: calc($hightTotBar * 0.6);
+    opacity: 0.75;
+    }
+
+}

@@ -1,0 +1,143 @@
+$black: #121212;
+$grafit: #313131;
+$lightGrafit: #4a4a4a;
+$darkGrafit: #202020;
+$white: #ffffff;
+$op: 0.6;
+$hightTotBar: 2.5rem;
+
+.BackImg {
+    background-color: $darkGrafit;
+    width: 100%;
+    // height: calc($hightTotBar *11);
+    height: 25vw;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./Background.jpeg");
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    // padding-bottom: 30%;
+    // vertical-align: center;
+    p {
+        font-size: calc($hightTotBar * 0.6);
+        text-align: center;
+        margin: calc($hightTotBar * 0.25);
+        color: $black;
+    }
+}
+.Logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    img 
+    { 
+        width: calc($hightTotBar*1.5);
+        height: auto;
+        margin: calc($hightTotBar*0.5/2);
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        // transition: 0.2s all;
+    }
+    p {
+        font-size: $hightTotBar;
+        margin: 0;
+        color: $black;
+
+    }
+}
+.Content {
+    padding-top: calc($hightTotBar *1.5);
+}
+
+.RightSite {
+    min-height: $hightTotBar*2;
+    width: calc($hightTotBar*16);
+    margin: calc($hightTotBar*0.35/2);
+        margin-right: calc($hightTotBar*0.25/2);
+    opacity: $op;
+    background-color: $grafit;
+    border-radius: calc($hightTotBar/5);
+    filter: drop-shadow(-1px 2px 2px $black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input::placeholder {
+        font-size: $hightTotBar/2.5;
+    }
+
+    input {
+        text-decoration: none;
+        background-color: $grafit;
+        border: none;
+        color: $white;
+        height: calc($hightTotBar*0.75*0.8);
+        width: 99%;
+        margin: calc($hightTotBar*(0.75 - 0.75 * 0.8)/2);
+    }
+    input:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+    }
+    
+    // input {
+    //     height: calc($hightTotBar*2);
+    //     width: calc($hightTotBar*16);
+    //     margin: calc($hightTotBar*0.35/2);
+    //     margin-right: calc($hightTotBar*0.25/2);
+    //     border-radius: calc($hightTotBar/2);
+    //     background-color: $lightGrafit;
+    //     border-color: $lightGrafit ;
+    //     text-decoration: none;
+    //     outline: $black;
+    //     color: $white;
+    //     padding: 0 calc($hightTotBar/2);
+    //     filter: drop-shadow(0 1px 2px #000000b5);
+    //     border: 1px;
+    //     // opacity: $op;
+    //     background-image: url("./search_White.png");
+    //     background-repeat: no-repeat;
+    //     text-indent: 3%;
+    //     background-size: calc($hightTotBar);
+    //     background-position: 2% center;
+    // }
+}
+.RightSite input:hover {
+    opacity: 0.9;
+}
+.RightSite input:focus {
+    opacity: 0.9;
+    // background-image: none;
+    // text-indent: 1%;
+}
+.Send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc($hightTotBar);
+    margin: calc($hightTotBar*(0.75 - 0.75 * 0.5));
+    width: 15%;
+    background-color: $white;
+    opacity: $op;
+    border-radius: calc($hightTotBar/2.5);
+
+
+    img {
+        width: calc($hightTotBar)*0.4;
+        height: auto;
+        margin: calc($hightTotBar)*0.2/2;
+        // transition: 0.2s all;
+        // border-radius: 50%;
+    }
+
+    p {
+        color: $black;
+    }
+}

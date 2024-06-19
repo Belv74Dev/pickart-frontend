@@ -1,0 +1,25 @@
+$black: #121212;
+$grafit: #313131;
+$lightGrafit: #4a4a4a;
+$darkGrafit: #202020;
+$white: #ffffff;
+$op: 0.6;
+$hightTotBar: 2.5rem;
+
+.Footer {
+    // position: absolute;
+    z-index: 111;
+	// bottom: 0;
+	background-color: $grafit;
+	border-top: $darkGrafit 3px;
+	border-top-style: solid;
+	box-sizing: border-box;
+	// border: 3px;
+	width: 100%;
+	height: calc($hightTotBar * 1.6);
+	display: flex;
+	justify-content: center;
+	color: $white;
+	margin-top: auto;
+	align-self: flex-end;
+}

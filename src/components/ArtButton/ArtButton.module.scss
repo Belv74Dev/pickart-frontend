@@ -1,0 +1,36 @@
+$black: #121212;
+$grafit: #313131;
+$lightGrafit: #4a4a4a;
+$darkGrafit: #202020;
+$white: #ffffff;
+$op: 0.5;
+$hightTotBar: 2.5rem;
+
+
+.ArtButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(49, 49, 49, 0.8);
+    border-radius: calc($hightTotBar/5);
+    width: $hightTotBar*2.5;
+    height: $hightTotBar*1.1;
+    position: absolute;
+    top: 90vh;
+    left: 35%;
+    z-index: 5;
+    img {
+        aspect-ratio: 1 / 1;
+        height: calc($hightTotBar)*0.85;
+        width: auto;
+        margin: calc($hightTotBar*(1 - 0.85)/2);
+        transition: 0.2s all;
+    }
+}
+
+.ArtButton img:hover {
+    opacity: 1;
+    height: calc($hightTotBar)*0.95;
+    width: auto;
+    margin: calc($hightTotBar*(1 - 0.95)/2);
+}
